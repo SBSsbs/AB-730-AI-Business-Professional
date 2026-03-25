@@ -1,0 +1,199 @@
+[00:00] Alex: Good morning, everyone. Thanks for making the time. The goal today is to lock down what our one‑month pilot for Copilot looks like—scope, guardrails, training, and who owns what. I’ll try to keep us practical: what we can actually launch by mid‑April.
+[00:45] Priya: Morning. I’m excited but also cautious. I want this pilot to solve real pain points—like writing customer updates, summarizing long email threads, and accelerating reporting. I don’t want a fancy demo that nobody uses after week one.
+[01:15] Jordan: Hi all. From a change perspective, we should treat this like any behavioral adoption: clear use cases, early champions, and a support loop. If we skip that, we’ll just hear ‘it’s cool’ and then silence.
+[01:40] Samira: Hello. My focus is security, privacy, and compliance. Copilot is powerful, but if our permissions are messy, it can surface content people shouldn’t see. We need to address information governance before we expand.
+[02:05] Miguel: Hey everyone. I’m here representing Sales. People are already asking, ‘Will this replace my job?’ and ‘Is it watching what I write?’ So we’ll need crisp messaging. Also, if it’s slow or blocked, Sales will drop it immediately.
+[02:40] Alex: Great. Let’s start with scope: we have budget for 120 licenses for the pilot. IT suggests 30 Ops, 30 Sales, 20 HR, 20 Finance, and 20 IT/Support. The idea is to cover different workflows and gather varied feedback.
+[03:20] Priya: I like the mix, but I’d rather overweight Ops and Sales because that’s where we’ll see immediate ROI. HR and Finance can join, but maybe fewer seats initially.
+[03:50] Jordan: If we under‑include HR, we lose the internal comms and training muscle. Also HR is a big consumer of text—policies, communications, job descriptions. They can produce strong use cases.
+[04:20] Samira: Finance is also sensitive. If they join, we need explicit boundaries: no copying confidential financial data into prompts that could be saved in chat history, and clear rules on handling outputs.
+[04:50] Miguel: And Sales wants it in Outlook and Teams. If it only works in Word, nobody will care. The pain is inbox and meeting follow-ups.
+[05:30] Alex: Understood. Copilot will be available across Word, PowerPoint, Excel, Outlook, and Teams for licensed users, but feature availability varies. In Teams, it’s best used for meeting recap and action items—assuming meetings are recorded/transcribed.
+[06:05] Priya: So step one is enabling transcription for pilot meetings?
+[06:12] Alex: Yes, but we need to align with Samira on policy. Some departments are currently not allowed to record certain meetings.
+[06:30] Samira: Correct. For pilots, we can allow transcription with a few constraints: clear notice to participants, no customer PII, and the meeting organizer must confirm the purpose. We should create a simple rule set.
+[07:10] Jordan: Can we write those as ‘do’s and don’ts’ in plain language? People won’t read a policy doc. Something like: ‘Don’t paste confidential data; do use it for summarizing your own content.’
+[07:35] Samira: Yes, plain language. But also we need technical hygiene: sensitivity labels, SharePoint permissions, and at least a quick audit of overly broad access on key sites.
+[08:05] Priya: This is where we might slow down. We can’t clean the entire SharePoint in two weeks.
+[08:20] Samira: We don’t need perfection. But we need a minimal risk baseline. Copilot respects permissions, but if permissions are wrong, Copilot becomes a flashlight that exposes the mess.
+[08:45] Alex: Actionable approach: choose a limited set of sites for the pilot—like one Ops site and one Sales enablement site—and validate their permissions. We can also disable Copilot access to some high‑risk repositories during the pilot.
+[09:25] Miguel: Will that feel like it’s broken to users? If they can’t find docs, they’ll say Copilot is useless.
+[09:40] Alex: We’ll set expectations: pilot is focused on specific use cases, not full enterprise search. We can expand as governance improves.
+[10:05] Priya: Okay, but we must communicate that carefully—otherwise it sounds like IT is limiting people.
+[10:30] Alex: Let’s list the top pilot use cases per function. Priya, Ops first?
+[10:40] Priya: Ops: 1) summarize incident reports and long email threads; 2) draft internal updates for stakeholders; 3) turn meeting notes into a clear action list; 4) create first drafts of SOPs and then have humans review.
+[11:20] Jordan: HR: 1) draft job descriptions and internal comms; 2) synthesize policy updates; 3) prepare interview question banks; 4) create meeting recap and follow-ups.
+[11:50] Miguel: Sales: 1) summarize account meeting notes; 2) draft customer follow‑up emails; 3) build proposals and slide outlines; 4) analyze CRM export spreadsheets in Excel—if Copilot can help with formulas or insights.
+[12:25] Samira: Compliance: I want one use case: ‘policy‑safe prompting’. We should teach people how to ask questions without including confidential data. That’s a critical competency.
+[12:45] Alex: IT/Support: 1) draft knowledge base articles; 2) summarize tickets and identify recurring issues; 3) help write scripts or runbooks—again with human validation.
+[13:20] Priya: Now the big question: how do we define ‘success’ for the pilot? If we don’t agree now, we’ll end in opinion wars.
+[13:35] Jordan: Agree. We need observable indicators: number of active users, weekly repeat usage, and qualitative feedback that a task was faster or clearer. But we must avoid turning it into performance measurement.
+[14:05] Samira: Also ‘success’ includes ‘no incidents’. If we have a data exposure event, the pilot will be seen as a failure regardless of productivity gains.
+[14:25] Miguel: Sales cares about time saved: can I write a follow‑up email in five minutes instead of fifteen? But yes, it shouldn’t be tracked per person in a punitive way.
+[15:00] Alex: Proposed success criteria: (A) at least 70% of pilot users try it weekly; (B) at least three validated use cases per department with documented before/after workflow; (C) training completion rate above 85%; (D) zero high‑severity security incidents.
+[15:40] Priya: I’m fine with that, but I’d like a concrete output: a playbook at the end—what worked, what didn’t, and what we need to scale.
+[15:55] Jordan: Yes. And a champions network: 2 champions per department, meeting weekly for 20 minutes to share what they’re seeing.
+[16:20] Alex: Let’s talk training. Jordan, what’s a realistic plan?
+[16:30] Jordan: I’d do a layered approach: 1) a 45‑minute kickoff session with live examples; 2) short ‘prompt patterns’ cheat sheet; 3) two office hours sessions per week for the first two weeks; 4) targeted mini-sessions by role—Sales email follow‑ups, Ops reporting, HR writing.
+[17:15] Miguel: Please keep it practical. Sales hates abstract training. Show them: ‘here’s a messy email chain, here’s how Copilot summarizes, here’s what to check.’
+[17:30] Samira: And I want a mandatory five‑minute security module: what not to input, how to classify content, and what to do if you think Copilot surfaced something you shouldn’t access.
+[18:05] Priya: Mandatory is good, but don’t make it feel like compliance training. Could we phrase it as ‘how to get safe, high‑quality outputs’?
+[18:20] Samira: Yes. ‘Safe prompting’ improves output quality anyway.
+[18:40] Alex: Support model: during pilot, users will ask, ‘Why is Copilot not seeing my doc?’ or ‘Why is it making things up?’ We need a triage flow.
+[18:58] Jordan: We can set up a Teams channel ‘Copilot Pilot Support’ with a simple intake template: app used, task, prompt, expected result, what happened. Champions can answer first; IT escalates technical; Security escalates policy.
+[19:30] Miguel: And response time matters. If Sales posts and nobody answers for two days, they’ll stop.
+[19:45] Alex: We can commit to a same‑day response during business hours for pilot questions. Not always a solution same day, but at least acknowledgement and next steps.
+[20:10] Priya: Let’s pause: what are our biggest risks besides permissions?
+[20:20] Samira: Data leakage, hallucinated outputs used as facts, and users pasting sensitive content into prompts. Also, ‘shadow AI’—people using external AI tools if they find Copilot constrained.
+[20:55] Jordan: Change risk: people try it once, get a mediocre result, and conclude it’s useless. We need to teach iteration and verification.
+[21:15] Miguel: Perception risk: employees thinking leadership is using Copilot to monitor them. We must be transparent: we are not reading individual prompts, we’re looking at aggregated adoption signals.
+[21:45] Alex: Great point. Priya, can we align on a message from leadership? Something like: ‘This tool is to help you, not to judge you.’
+[22:00] Priya: Yes, but it has to be credible. We should explicitly say: ‘We won’t use Copilot usage to evaluate individual performance.’ That’s a trust anchor.
+[22:20] Samira: And we must be accurate: we will have telemetry, but we can commit to using it at an aggregate level for adoption planning.
+[22:40] Jordan: I’ll draft the comms with that wording.
+[23:00] Alex: Now, timeline. If we want mid‑April kickoff, we need decisions today: pilot scope, training dates, and governance baseline tasks.
+[23:20] Priya: What are the baseline tasks?
+[23:25] Alex: 1) Identify pilot user list; 2) license assignment; 3) validate permissions on selected SharePoint sites; 4) create safe prompting guidance; 5) set up support channel; 6) schedule training.
+[24:05] Samira: Add: confirm sensitivity labeling strategy for pilot docs. If docs aren’t labeled, users won’t think about classification.
+[24:25] Miguel: Is labeling realistic in two weeks?
+[24:35] Samira: Not enterprise-wide, but for pilot sites, yes. Even a simplified labeling practice: Public, Internal, Confidential.
+[25:05] Jordan: We also need a feedback mechanism. I propose a weekly 5‑question pulse survey: what did you use, did it help, where did it fail, did you verify, any concerns.
+[25:30] Priya: Make it short. People won’t fill long surveys.
+[25:45] Alex: Let’s shift to governance: who approves expansion after pilot?
+[25:55] Priya: I think a small steering group: me as sponsor, Alex for IT, Samira for security, Jordan for change, and one representative from Finance.
+[26:15] Samira: And expansion should be gated by: permission audit outcomes, incident logs, and demonstrated use cases.
+[26:30] Miguel: Sales wants to know: if pilot is successful, when do we scale to the rest of Sales?
+[26:45] Priya: We can’t promise a date, but we can define conditions. If the pilot playbook is strong and security is comfortable, we can request budget for additional licenses in the next cycle.
+[27:20] Alex: Let’s do a quick ‘what could derail this’ round. One sentence each.
+[27:28] Miguel: If the first week experience is slow, confusing, or blocked, adoption dies.
+[27:40] Jordan: If leaders treat it like a surveillance tool or talk about productivity targets, trust dies.
+[27:50] Samira: If we ignore governance and have an incident, rollout dies.
+[28:00] Priya: If we can’t connect it to real business outcomes, it becomes a novelty.
+[28:10] Alex: If support is overwhelmed and we can’t respond quickly, frustration spreads.
+[28:30] Alex: Okay. Deep dive: permissions and data boundaries. Samira, can you explain the minimal baseline in plain English?
+[28:45] Samira: Sure. Copilot only shows what you already have access to. That sounds safe—but if access is too broad, Copilot makes it easier to find sensitive info. So baseline is: (1) pilot sites must have correct membership; (2) remove ‘Everyone except external users’ access where it’s not needed; (3) apply labels to the most sensitive libraries; (4) remind users not to paste confidential data into prompts.
+[29:30] Miguel: When you say ‘paste into prompts,’ does Copilot store prompts?
+[29:40] Samira: There is chat history and logs depending on settings. The key message is: treat prompts like business communication. Don’t paste secrets you wouldn’t email to a broad group.
+[30:05] Jordan: That’s a great phrasing.
+[30:20] Priya: I’m still worried we’re making it too complicated. People will feel they need permission to use it.
+[30:35] Jordan: We can normalize it with examples: ‘Here’s a safe prompt; here’s an unsafe prompt.’ People learn fast if it’s concrete.
+[30:55] Alex: Exactly. We’ll provide a one‑pager of prompt patterns by role.
+[31:10] Miguel: Can we address the hallucination problem directly? Sales will copy/paste outputs into customer emails.
+[31:25] Alex: We should. Copilot can be wrong. The training must include ‘verify before you send.’
+[31:35] Samira: From compliance standpoint, we should say: ‘Copilot output is a draft. Human review required.’
+[31:45] Priya: Agreed. That’s also legal coverage.
+[32:05] Alex: Now, pilot user selection: Jordan, how do we pick champions?
+[32:15] Jordan: We need a mix: early adopters who enjoy experimenting, and credible peers who aren’t seen as ‘IT pets.’ Ideally people who communicate well and are patient. Two per department.
+[32:40] Miguel: In Sales, I can nominate one top performer and one average rep. But we must avoid making it look like only top performers get access.
+[32:55] Jordan: Good. We’ll message it as ‘diverse workflows’ not ‘elite group.’
+[33:10] Priya: Cost question: what’s the incremental cost after pilot?
+[33:18] Alex: Licensing cost scales per user. For now, pilot seats are covered. Expansion would require a business case. We’ll capture time saved and qualitative ROI during pilot.
+[33:40] Priya: I want Finance involved in validating that ROI framing.
+[33:50] Alex: I’ll invite a Finance partner to the steering group.
+[34:05] Alex: Let’s discuss what we’ll measure. We said adoption and use cases. But how do we capture ‘time saved’ credibly?
+[34:20] Jordan: Lightweight self‑reporting: ask users to estimate time saved on a task and provide a short description. Not precise, but directional.
+[34:35] Miguel: Sales can do a before/after: draft email without Copilot, then with Copilot, timed. Even a small sample.
+[34:50] Priya: Ops can do similar for incident summaries.
+[35:05] Samira: I also want to track policy adherence: any reports of sensitive content, any accidental sharing. Again, not to blame people, but to improve guidance.
+[35:25] Jordan: We must be careful with phrasing. ‘Report issues’ not ‘report violations.’
+[35:40] Alex: Now, tooling constraints: some users will ask for Copilot to access external websites or customer systems. We need to set boundaries.
+[35:55] Priya: We should define what data sources are in scope: Outlook emails, Teams chats, SharePoint, OneDrive. Not external CRM unless integrated.
+[36:10] Miguel: But Sales lives in CRM.
+[36:20] Alex: Right. For pilot, we focus on Microsoft 365 content. Later, we can explore connectors or integration options.
+[36:45] Miguel: So we need to avoid overselling. If leadership says ‘Copilot will summarize your CRM,’ and it can’t, we lose credibility.
+[36:58] Priya: Agreed. Marketing will oversell if we let them. We need a disciplined narrative.
+[37:10] Jordan: Narrative proposal: ‘Copilot helps you start faster and finish cleaner—drafts, summaries, and structure—while you stay responsible for accuracy.’
+[37:30] Samira: And add: ‘It respects access permissions.’ But also: ‘clean permissions matter.’
+[37:45] Alex: Let’s capture decisions so far. Decision one: pilot size 120 with distribution—do we finalize?
+[37:58] Priya: I suggest 40 Ops, 35 Sales, 15 HR, 20 Finance, 10 IT/Support.
+[38:15] Jordan: HR at 15 is workable if we pick the right users.
+[38:25] Miguel: Sales at 35 works. I’ll pick a cross‑section.
+[38:35] Samira: I’m okay if Finance participants are briefed carefully.
+[38:45] Alex: Okay. Decision: pilot seats allocated as Priya proposed.
+[39:05] Alex: Decision two: training plan—Jordan’s layered approach plus a short safe prompting module. Agreed?
+[39:15] All: Agreed.
+[39:20] Alex: Decision three: governance baseline—limited pilot sites with permission review and simplified labeling. Samira, can you own the baseline checklist?
+[39:35] Samira: Yes. I’ll provide a checklist and a quick review of the two pilot SharePoint sites.
+[40:00] Alex: Open question: which pilot sites? Priya, you mentioned an Ops site.
+[40:10] Priya: Ops has an ‘Incident Management’ site and a ‘Weekly Ops Review’ site. The incident one is sensitive. Maybe weekly review is safer.
+[40:28] Samira: Agree. Let’s start with ‘Weekly Ops Review’ and a Sales enablement site that doesn’t include customer PII.
+[40:45] Miguel: Sales enablement site is mostly decks and product notes. Good.
+[41:05] Jordan: We should also create a ‘safe sandbox’ set of sample documents for training—fake emails, fake reports—so people can practice without fear.
+[41:25] Alex: Love that. That will also help standardize the training.
+[41:35] Priya: But don’t make it too fake. People need relevance.
+[41:45] Jordan: We’ll use realistic examples, just anonymized.
+[42:05] Alex: Support channel: Jordan proposed a Teams channel. I’ll create it and set up the intake template.
+[42:20] Miguel: Can we pin a ‘Top 10 prompts for Sales’ message?
+[42:30] Jordan: Yes. We’ll pin role-based prompt libraries.
+[42:45] Priya: Let’s talk about user anxiety—Miguel raised job replacement concerns.
+[42:55] Miguel: Yes. Some reps think Copilot is management’s way to reduce headcount. Also they fear writing style will be judged.
+[43:10] Priya: We need to clearly state: this is about productivity support, not headcount reduction. And we’re not grading anyone’s prompts.
+[43:25] Samira: We must avoid making claims we can’t uphold. But we can commit to not using the tool to monitor individuals.
+[43:40] Jordan: I’ll include an FAQ: ‘What Copilot does and does not do,’ including privacy and telemetry in plain language.
+[44:05] Alex: Let’s make sure we have next steps with owners. I’ll summarize in a minute. Anything else?
+[44:15] Samira: One more: incident response. If someone believes Copilot surfaced restricted content, what do they do? We need a simple path.
+[44:30] Alex: We can route through Security: tag Samira’s team in the support channel and log it.
+[44:40] Jordan: And teach users to stop and report rather than screenshot and share.
+[44:55] Miguel: Also: mobile experience. Sales uses phones.
+[45:05] Alex: Pilot will include mobile access where available, but some features are better on desktop. We’ll communicate recommended scenarios.
+[45:25] Priya: I want to ensure this pilot doesn’t become ‘IT’s project.’ Ops leaders need to be visibly involved.
+[45:40] Alex: Agreed. Priya, can you kick off the kickoff session with a two‑minute message: why we’re doing this and what success looks like?
+[45:55] Priya: Yes.
+[46:05] Jordan: And champions should share their early wins. Social proof matters.
+[46:18] Miguel: We can do a ‘prompt of the week’ in Teams.
+[46:28] Jordan: Perfect.
+[46:40] Alex: Let’s do a quick recap of decisions and actions.
+[46:45] Alex: Decisions: (1) Pilot size 120: 40 Ops, 35 Sales, 15 HR, 20 Finance, 10 IT/Support. (2) Training: 45‑minute kickoff + cheat sheet + office hours + role mini-sessions + short safe prompting module. (3) Governance baseline: limited pilot sites with permission review and simplified labels.
+[47:35] Alex: Action items: I own licensing and setup, plus creating the pilot support channel. Jordan owns comms, training content, champions onboarding, and weekly pulse survey. Samira owns governance checklist, permission review for pilot sites, and incident path. Miguel owns Sales pilot user list and prompt examples. Priya sponsors and aligns Ops leaders, and will open the kickoff session.
+[48:25] Priya: Can we add a deadline for each? Otherwise it’ll drift.
+[48:35] Alex: Good point. Let’s set: user lists by Friday EOD; support channel by Monday; governance checklist by Tuesday; kickoff training the following Thursday.
+[48:55] Samira: Governance checklist by Tuesday is fine.
+[49:05] Jordan: Comms draft by Monday so we can review.
+[49:20] Miguel: I’ll provide Sales prompt examples by Monday too.
+[49:30] Alex: Open questions to carry forward: (1) exact pilot SharePoint sites—Priya and Miguel will confirm by tomorrow; (2) Finance rep for steering group—Alex to invite; (3) policy wording for telemetry and privacy—Jordan and Samira to finalize.
+[50:10] Priya: Also: do we need legal review of the communications?
+[50:20] Samira: If we mention data processing, it may be wise. But keep it simple and factual, and we can route through Legal quickly.
+[50:35] Jordan: I’ll share with Legal for a light review.
+[50:45] Alex: Before we close, any final concerns?
+[50:55] Miguel: Just one: make sure the first experience includes a ‘wow’ moment. People need a quick win.
+[51:05] Jordan: We’ll design the kickoff around quick wins by role. But also teach verification.
+[51:20] Priya: Yes—wow, then discipline.
+[51:30] Samira: And ensure quick wins are safe wins.
+[51:40] Alex: Perfect. I’ll send a meeting recap with decisions and action items. Thanks all.
+[52:00] Priya: Thanks.
+[52:02] Jordan: Thanks everyone.
+[52:05] Samira: Thank you.
+[52:07] Miguel: Thanks.
+[52:15] Alex: Meeting adjourned.
+[52:30] Miguel: Quick question—can we get a sandbox doc set in Sales with fake customer names?
+[52:40] Jordan: Yes, I’ll create anonymized examples. We’ll keep it realistic but not real.
+[52:55] Samira: Please avoid anything that looks like real customer data. Use clearly fictional names.
+[53:05] Miguel: Got it.
+[53:20] Priya: Alex, send me the draft timeline after the recap.
+[53:25] Alex: Will do.
+[53:45] Alex: While we’re here, one more thought: we should decide where prompts and best practices live—SharePoint page or Teams wiki?
+[54:00] Jordan: Teams channel pinned posts are easiest, plus a SharePoint page as the source of truth.
+[54:15] Samira: SharePoint allows better control and auditing. Teams posts can drift.
+[54:30] Miguel: Sales won’t click SharePoint. If it’s not in Teams, it doesn’t exist.
+[54:45] Priya: Then do both. Teams for convenience, SharePoint for governance.
+[55:00] Alex: Agreed. We’ll maintain a SharePoint ‘Copilot Pilot Hub’ and pin key links in Teams.
+[55:20] Jordan: Also, let’s define a consistent naming convention for prompts: ‘[Role] – [Task] – [Pattern]’.
+[55:40] Miguel: Like ‘Sales – Follow‑up Email – Draft + Verify’?
+[55:50] Jordan: Exactly.
+[56:05] Samira: Include a label like ‘Safe’ or ‘Restricted’.
+[56:20] Alex: Good. We’ll add a ‘Safety tag’ on prompt templates.
+[56:45] Priya: One last thing: who will host office hours?
+[56:55] Jordan: Champions plus me. Alex can join the first session for technical questions.
+[57:10] Alex: Works. I’ll also bring a short troubleshooting checklist: licensing, app version, and where Copilot appears.
+[57:25] Samira: And I’ll join one office hour to answer governance questions and reinforce safe prompting.
+[57:45] Miguel: If you want Sales attendance, schedule it early morning or right after lunch. Otherwise we’ll miss it.
+[58:05] Jordan: Noted. We’ll do one at 9:00 and one at 13:30 for the first two weeks.
+[58:25] Priya: Perfect. Okay, now we’re really done.
+[58:35] Alex: Agreed. Closing the call.
+[58:45] All: Bye.
+[59:00] Alex: Call ending…
+[59:30] Alex: Recording stopped.
+[60:00] System: Meeting ended
+
+ 
+

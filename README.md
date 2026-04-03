@@ -195,5 +195,6 @@ Data Architect & Microsoft Certified Trainer (MCT)
 
 If you're preparing for AB-730 or working with AI & Copilot:
 👉 Let’s connect on LinkedIn and grow together!
+* https://www.linkedin.com/in/semeh-ben-salem-phd-60b5759a/
 
 ---
